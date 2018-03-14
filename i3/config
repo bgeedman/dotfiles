@@ -31,7 +31,7 @@ floating_modifier $mod
 exec --no-startup-id unclutter
 
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
-exec compton
+exec compton --inactive-opacity=0.9
 
 
 # start a terminal
@@ -44,7 +44,7 @@ bindsym $mod+q kill
 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -l 5 -p "%" -nf '#88e9fd' -nb '#000000' -sb '#88e9fd' -sf '#000000'
 
 
 
@@ -164,10 +164,10 @@ bindsym $mod+Shift+BackSpace exec $shutdown
 
 bindsym Control+$mod+l exec ~/.config/i3/i3lock-fancy/lock -- scrot -z
 
-bindsym $mod+Shift+y resize shrink width 5 px or 5 ppt
-bindsym $mod+Shift+u resize shrink height 5 px or 5 ppt
-bindsym $mod+Shift+i resize grow height 5 px or 5 ppt
-bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+bindsym $mod+Shift+y resize shrink width 1 px or 1 ppt
+bindsym $mod+Shift+u resize shrink height 1 px or 1 ppt
+bindsym $mod+Shift+i resize grow height 1 px or 1 ppt
+bindsym $mod+Shift+o resize grow width 1 px or 1 ppt
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
